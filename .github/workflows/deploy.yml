@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build -- --base-href="/Onesso/"
+        run: npm run build -- --base-href="/controlLoginpage/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
