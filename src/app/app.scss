@@ -1,0 +1,186 @@
+.root {
+  min-height: 60vh;
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+  }
+
+  .medium {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    // height: 60%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    display: flex;
+    min-height: 60vh;
+
+    @media (max-width: 940px) {
+      width: 90%;
+      height: 80%;
+      min-width: 90svw;
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 60vh;
+
+      .combine {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        display: flex;
+        .logo {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: calc(welcomeInfo);
+          img {
+            width: 15vw;
+            height: auto;
+          }
+        }
+        .welcomeInfo {
+          padding: 4vw 0px;
+          flex: 3;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1vh;
+          h1 {
+            font-size: 3vw;
+            padding: 1vw 0px;
+            color: white;
+          }
+          h2 {
+            font-size: 4vw;
+            padding: 1vw 0px;
+            font-weight: bold;
+            color: white;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 940px) {
+      .left {
+        display: none;
+      }
+    }
+
+    .right {
+      padding: 20px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      flex: 1;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 60vh;
+
+      .info {
+        margin-bottom: 30px;
+        h1 {
+          font-size: xx-large;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        @media (max-width: 940px) {
+          margin-top: 50px;
+          min-height: 60vh;
+        }
+
+        span {
+          color: gray;
+        }
+
+        .logindiv {
+          margin-top: 20px;
+
+          .login-form {
+            flex: 1;
+            .username-div {
+              .userNameInput {
+                width: 100%;
+                max-width: 320px;
+                height: 44px;
+                padding: 0 12px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                background-color: #fff;
+                font-size: 16px;
+                color: #111;
+                box-sizing: border-box;
+                transition: all 0.2s ease-in-out;
+
+                &:focus {
+                  border: 1px solid #0a66c2;
+                  box-shadow: 0 0 0 1px #0a66c2;
+                  outline: none;
+                }
+
+                &::placeholder {
+                  color: #777;
+                  font-size: 14px;
+                }
+              }
+            }
+            .password-div {
+              margin-top: 20px;
+              position: relative;
+              .passwordNameInput {
+                width: 100%;
+                max-width: 320px;
+                height: 44px;
+                padding: 0 12px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                background-color: #fff;
+                font-size: 16px;
+                color: #111;
+                transition: all 0.2s ease-in-out;
+                box-sizing: border-box;
+
+                &:focus {
+                  border: 1px solid #0a66c2;
+                  box-shadow: 0 0 0 1px #0a66c2;
+                  outline: none;
+                }
+
+                &::placeholder {
+                  color: #777;
+                  font-size: 14px;
+                }
+              }
+              .toggle-password {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                font-size: 1.2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
